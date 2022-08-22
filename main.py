@@ -7,6 +7,7 @@ import os
 import random
 
 today = datetime.now()
+today2 = datetime.date.today()
 start_date = os.environ['START_DATE']
 city = os.environ['CITY']
 birthday = os.environ['BIRTHDAY']
@@ -44,7 +45,7 @@ def get_random_color():
   return "#%06x" % random.randint(0, 0xFFFFFF)
 
 def get_days_time():
-  return (today().strftime('%Y年%m月%d日'))
+  return (today2().strftime('%Y年%m月%d日'))
 
 
 client = WeChatClient(app_id, app_secret)
